@@ -27,8 +27,8 @@ export class MyApp {
       { title: 'Inicio', component: InicioPage, icon: 'home' },
       { title: 'Red Médica', component: RedMedicaPage, icon: 'people' },
       { title: 'Mapas', component: MapasPage, icon: 'globe' },
-      { title: 'Ubicación', component: UbicacionPage, icon: 'mail' },
-      { title: 'Contacto', component: ContactoPage, icon: 'pin' }
+      { title: 'Ubicación', component: UbicacionPage, icon: 'pin' },
+      { title: 'Contacto', component: ContactoPage, icon: 'mail' }
     ];
 
   }
