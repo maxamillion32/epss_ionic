@@ -1,0 +1,27 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Clínicas EPSS</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content>
+
+  <img src="assets/images/clinicas.jpg" width="100%" />
+
+  <button ion-button full>Dirección</button>
+
+  <p style="display: block; text-align: center;">12 Calle 2-44 Zona 9, Guatemala</p>
+
+  <button ion-button full (click)="call(23892900)" icon-left> <ion-icon name="call"></ion-icon>Llámanos</button>
+
+  <ion-footer style="margin-bottom: 20px">
+    <button style="background-color: #e4960e; color: #ffffff;" ion-button full *ngIf="wazeInstalado" (click)="goWaze(14.6019881,-90.5243813)" icon-left> <ion-icon name="car"></ion-icon> Ir con Waze</button>
+
+    <button style="background-color: #e4960e; color: #ffffff;" ion-button full *ngIf="!wazeInstalado" (click)="descargarWaze()" icon-left> <ion-icon name="car"></ion-icon> Descargar Waze</button>
+  </ion-footer>
+
+</ion-content>

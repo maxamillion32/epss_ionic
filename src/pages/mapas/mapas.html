@@ -1,0 +1,23 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Mapas</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding>
+
+    <button *ngFor="let item of items" (click)="ir($event, item)" style="background-color: #FFF; padding: 0;">
+      <ion-card style="margin: 10px 0px; width: 100%;">
+        <div class="card-title" style="background-color: #071434; color: white; padding: 2px 5px; font-weight: bold">{{item.title}}</div>
+        <img src="assets/images/{{item.imagen}}" />
+      </ion-card>
+    </button>
+
+  	
+
+</ion-content>
+

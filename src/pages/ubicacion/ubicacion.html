@@ -1,0 +1,33 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Ubicación</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding>
+  <ion-list>
+    <ion-item>
+      <ion-label>Proveedor</ion-label>
+      <ion-select [(ngModel)]="tipoProveedor" cancelText="Cancelar" okText="Seleccionar">
+        <ion-option *ngFor="let item of items" value="{{item.tipoProveedor}}">{{item.title}}</ion-option>
+        <!--<ion-option value="2">Hospitales</ion-option>
+        <ion-option value="3">Centros de Diagnóstico</ion-option>
+        <ion-option value="4">Laboratorios</ion-option>-->
+      </ion-select>
+    </ion-item>
+  </ion-list>	
+
+  <ion-item>
+    <ion-label>Kilómetros <ion-badge item-right style="float:right">{{km}} km.</ion-badge></ion-label>
+  </ion-item>
+  <ion-item>
+    <ion-range min="5" max="20" step="5" snaps="true" color="primary" [(ngModel)]="km" ></ion-range>
+  </ion-item>
+  <button ion-button full (click)="buscar($event)">Buscar</button>
+
+</ion-content>
+
